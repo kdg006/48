@@ -3,7 +3,17 @@ from convex import Point, Segment, Polygon
 from straight import Straight
 
 
-class TestPoint:
+class TestPoint1:
+
+    def setup_method(self):
+        Straight.set_straight(-1, 0, 0, 1)
+        self.a = Point(R2Point(0, 0))
+
+    def test_point1(self):
+        assert self.a.count == 0
+
+
+class TestPoint2:
 
     def setup_method(self):
         Straight.set_straight(1, 1, 0, 0)

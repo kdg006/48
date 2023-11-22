@@ -92,7 +92,8 @@ class Polygon(Figure):
         if t.is_light(self.points.last(), self.points.first()):
 
             # учёт удаления ребра, соединяющего конец и начало дека
-            Figure.count -= R2Point.okr1(self.points.last(), self.points.first())
+            Figure.count -= R2Point.okr1(self.points.last(),
+                                         self.points.first())
             self._perimeter -= self.points.first().dist(self.points.last())
             self._area += abs(R2Point.area(t,
                                            self.points.last(),

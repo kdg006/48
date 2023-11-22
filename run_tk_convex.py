@@ -2,7 +2,6 @@
 from tk_drawer import TkDrawer
 from r2point import R2Point
 from convex import Void, Point, Segment, Polygon
-from straight import Straight
 
 
 def void_draw(self, tk):
@@ -31,7 +30,6 @@ setattr(Polygon, 'draw', polygon_draw)
 
 tk = TkDrawer()
 f = Void()
-Straight.set_straight()
 tk.get_points()
 tk.clean()
 
@@ -42,6 +40,6 @@ try:
         f.draw(tk)
         print(f"S = {f.area()}, P = {f.perimeter()}\n")
         print(f"Number = {f.count}\n")
-except(EOFError, KeyboardInterrupt):
+except (EOFError, KeyboardInterrupt):
     print("\nStop")
     tk.close()

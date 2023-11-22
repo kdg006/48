@@ -11,5 +11,5 @@ try:
         print(f"S = {f.area()}, P = {f.perimeter()}\n")
         print(f"Number = {f.count}\n")
         print()
-except(EOFError, KeyboardInterrupt):
+except (EOFError, KeyboardInterrupt):
     print("\nStop")
